@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { Link } from "react-router-dom";
 import {
   FaFacebookF,
   FaInstagram,
@@ -13,13 +14,12 @@ function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-container">
-
         {/* Company */}
         <div className="footer-section">
           <h2>Tridax Estates</h2>
           <p>
-            Helping you find premium homes, lands, and investment
-            opportunities with trust and excellence.
+            Helping you find premium homes, lands, and investment opportunities
+            with trust and excellence.
           </p>
         </div>
 
@@ -27,11 +27,11 @@ function Footer() {
         <div className="footer-section">
           <h3>Quick Links</h3>
 
-          <a href="#home">Home</a>
-          <a href="#about">About Us</a>
-          <a href="#services">Services</a>
-          <a href="#properties">Properties</a>
-          <a href="#contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/properties">Properties</Link>
+          <Link to="/contact">Contact</Link>
         </div>
 
         {/* Contact */}
@@ -76,9 +76,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>
-          © 2026 Tridax Estates & Property Ltd. All Rights Reserved.
-        </p>
+        <p>© 2026 Tridax Estates & Property Ltd. All Rights Reserved.</p>
       </div>
     </footer>
   );

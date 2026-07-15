@@ -1,18 +1,18 @@
 .site-footer {
   background: #d1a7a7;
-  color:black;
+  color: black;
   padding-top: 60px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .footer-container {
   width: 90%;
   max-width: 1200px;
   margin: auto;
-
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 40px;
-
   padding-bottom: 40px;
 }
 
@@ -49,6 +49,7 @@
   display: flex;
   gap: 15px;
   margin-top: 20px;
+  flex-wrap: wrap;
 }
 
 .social-icons a {
@@ -76,4 +77,232 @@
   padding: 20px 10px;
   color: black;
   font-size: 15px;
+}
+
+/* ====== RESPONSIVE FOOTER ====== */
+
+/* Tablet and small laptops */
+@media (max-width: 992px) {
+  .site-footer {
+    padding-top: 50px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
+    padding-bottom: 35px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .footer-section p {
+    font-size: 0.95rem;
+  }
+
+  .footer-section a {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+  }
+
+  .social-icons a {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+}
+
+/* Mobile landscape and tablets */
+@media (max-width: 768px) {
+  .site-footer {
+    padding-top: 40px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 30px;
+    padding-bottom: 30px;
+    width: 95%;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 1.1rem;
+    margin-bottom: 12px;
+  }
+
+  .footer-section p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .footer-section a {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    justify-content: center;
+  }
+
+  .footer-section a:hover {
+    transform: translateX(3px);
+  }
+
+  .footer-section p svg {
+    margin-right: 8px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 15px;
+  }
+
+  .footer-bottom {
+    padding: 15px 10px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 576px) {
+  .site-footer {
+    padding-top: 35px;
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding-bottom: 25px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .footer-section {
+    text-align: center;
+    padding: 0 5px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-section p {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    max-width: 100%;
+  }
+
+  .footer-section a {
+    font-size: 0.85rem;
+    margin-bottom: 7px;
+    display: inline-block;
+  }
+
+  .footer-section a:hover {
+    transform: translateX(0) scale(1.02);
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+
+  .footer-bottom {
+    padding: 12px 10px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+  .site-footer {
+    padding-top: 30px;
+  }
+
+  .footer-container {
+    gap: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+
+  .footer-section p {
+    font-size: 0.8rem;
+  }
+
+  .footer-section a {
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+  }
+
+  .social-icons a {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    padding: 10px 8px;
+  }
+}
+
+/* Optional: Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .site-footer {
+    background: #2c2c2c;
+    color: #e0e0e0;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    color: #e0e0e0;
+  }
+
+  .footer-section p {
+    color: #cccccc;
+  }
+
+  .footer-section a {
+    color: #cccccc;
+  }
+
+  .footer-section a:hover {
+    color: #d4af37;
+  }
+
+  .footer-section p svg {
+    color: #cccccc;
+  }
+
+  .footer-bottom {
+    border-top-color: #444;
+    color: #cccccc;
+  }
 }

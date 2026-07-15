@@ -1,50 +1,591 @@
+/* ====== SERVICES SECTION ====== */
 .section {
   padding: 90px 0;
+  width: 100%;
+  overflow: hidden;
 }
 
 .section h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+  width: 100%;
 }
+
+.section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #d1a7a7;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ====== SERVICES CARDS GRID ====== */
 .cards {
   display: grid;
-
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-
   gap: 30px;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* ====== INDIVIDUAL SERVICE CARD ====== */
 .card {
   background: white;
-
   border-radius: 15px;
-
   overflow: hidden;
-
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-
-  transition: 0.4s;
+  transition: 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: relative;
 }
 
 .card:hover {
   transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
 }
 
+.card:active {
+  transform: translateY(-4px);
+}
+
+/* ====== CARD IMAGE ====== */
 .card img {
   width: 100%;
-
   height: 240px;
-
-  object-fit: cover/contain;
-
+  object-fit: cover;
   display: block;
+  background-color: #f0f0f0; /* Fallback color */
+  transition: 0.3s ease;
 }
 
+.card:hover img {
+  transform: scale(1.03);
+}
+
+/* ====== CARD BODY ====== */
 .card-body {
   padding: 25px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card h3 {
   margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #222;
+  line-height: 1.4;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  flex: 1;
+}
+
+/* ====== CARD ICON ====== */
+.card-icon {
+  font-size: 2.5rem;
+  color: #d1a7a7;
+  margin-bottom: 12px;
+}
+
+/* ====== CARD BUTTON ====== */
+.card-btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #d1a7a7;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  transition: 0.3s;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+.card-btn:hover {
+  background: #b88585;
+  transform: translateX(5px);
+}
+
+/* ====== CARD BADGE ====== */
+.card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #d1a7a7;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.card-badge.popular {
+  background: #ff6b6b;
+}
+
+.card-badge.new {
+  background: #4ecdc4;
+}
+
+/* ====== RESPONSIVE SERVICES SECTION ====== */
+
+/* Large desktops */
+@media (max-width: 1200px) {
+  .section {
+    padding: 80px 0;
+  }
+
+  .section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 92%;
+  }
+
+  .card img {
+    height: 220px;
+  }
+
+  .card-body {
+    padding: 22px;
+  }
+
+  .card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Small laptops and tablets */
+@media (max-width: 992px) {
+  .section {
+    padding: 70px 0;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 45px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+    width: 95%;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 12px;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .card-btn {
+    padding: 8px 22px;
+    font-size: 0.9rem;
+  }
+
+  .card-icon {
+    font-size: 2.2rem;
+  }
+
+  .card-badge {
+    font-size: 0.7rem;
+    padding: 4px 12px;
+  }
+}
+
+/* Tablets and large phones */
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+
+  .section h2::after {
+    width: 60px;
+    height: 3px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    width: 95%;
+  }
+
+  .card {
+    border-radius: 12px;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+  }
+
+  .card img {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 18px;
+  }
+
+  .card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .card-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  .card-icon {
+    font-size: 2rem;
+  }
+
+  .card-badge {
+    font-size: 0.65rem;
+    padding: 3px 10px;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 576px) {
+  .section {
+    padding: 50px 0;
+  }
+
+  .section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 35px;
+  }
+
+  .section h2::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .card {
+    max-width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+  }
+
+  .card img {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+  }
+
+  .card-btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-btn:hover {
+    transform: none;
+  }
+
+  .card-icon {
+    font-size: 1.8rem;
+  }
+
+  .card-badge {
+    font-size: 0.6rem;
+    padding: 3px 8px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 400px) {
+  .section {
+    padding: 40px 0;
+  }
+
+  .section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+  }
+
+  .cards {
+    gap: 15px;
+    padding: 0 10px;
+  }
+
+  .card img {
+    height: 170px;
+  }
+
+  .card-body {
+    padding: 14px;
+  }
+
+  .card h3 {
+    font-size: 0.95rem;
+  }
+
+  .card p {
+    font-size: 0.8rem;
+  }
+
+  .card-btn {
+    padding: 6px 15px;
+    font-size: 0.8rem;
+  }
+
+  .card-icon {
+    font-size: 1.6rem;
+  }
+}
+
+/* ====== CARD VARIANTS ====== */
+
+/* Image left layout */
+.card.image-left {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  min-height: 200px;
+}
+
+.card.image-left img {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .card.image-left {
+    grid-template-columns: 1fr;
+  }
+
+  .card.image-left img {
+    height: 200px;
+  }
+}
+
+/* Compact card */
+.card.compact .card-body {
+  padding: 15px;
+}
+
+.card.compact img {
+  height: 160px;
+}
+
+@media (max-width: 576px) {
+  .card.compact img {
+    height: 140px;
+  }
+}
+
+/* No image card */
+.card.no-image {
+  padding: 30px;
+}
+
+.card.no-image img {
+  display: none;
+}
+
+/* ====== SECTION VARIATIONS ====== */
+
+/* Dark section background */
+.section.dark {
+  background: #f8f5f5;
+}
+
+.section.dark .card {
+  background: white;
+}
+
+/* Featured section */
+.section.featured {
+  background: linear-gradient(135deg, #f8f5f5 0%, #e8e0e0 100%);
+}
+
+/* ====== ANIMATIONS ====== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(5) {
+  animation-delay: 0.5s;
+}
+.card:nth-child(6) {
+  animation-delay: 0.6s;
+}
+
+/* ====== ACCESSIBILITY ====== */
+@media (prefers-reduced-motion: reduce) {
+  .card {
+    animation: none;
+  }
+
+  .card:hover {
+    transform: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .card:hover img {
+    transform: none;
+  }
+
+  .card-btn {
+    transition: none;
+  }
+
+  .card-btn:hover {
+    transform: none;
+  }
+}
+
+/* ====== DARK MODE SUPPORT ====== */
+@media (prefers-color-scheme: dark) {
+  .section.dark {
+    background: #2c2c2c;
+  }
+
+  .card {
+    background: #2c2c2c;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .card h3 {
+    color: #e0e0e0;
+  }
+
+  .card p {
+    color: #b0b0b0;
+  }
+
+  .card img {
+    background-color: #333;
+  }
+}
+
+/* ====== PRINT STYLES ====== */
+@media print {
+  .section {
+    padding: 40px 0;
+  }
+
+  .card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card-btn {
+    display: none;
+  }
+}
+
+/* ====== UTILITY CLASSES ====== */
+.text-center {
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
 }

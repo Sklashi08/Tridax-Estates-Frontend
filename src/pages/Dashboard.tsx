@@ -1,13 +1,12 @@
 import Features from "../components/Property";
 import Hero from "../components/Hero";
-import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import Footer from "../components/Footer";
 
 function Dashboard() {
   return (
     <>
-      <Navbar />
+    
       <Hero />
       <Services />
       <Features />

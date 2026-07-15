@@ -27,9 +27,6 @@ function Navbar() {
               <Link to="/contact">
                 <a href="#">Contact</a>
               </Link>
-              <Link to="/explore">
-                <a href="#">Explore</a>
-              </Link>
             </ul>
           </nav>
         </div>

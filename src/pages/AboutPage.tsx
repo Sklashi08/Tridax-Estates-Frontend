@@ -11,6 +11,7 @@ import {
 
 function AboutPage() {
   return (
+    
     <main className="about-page">
       {/* Hero */}
 

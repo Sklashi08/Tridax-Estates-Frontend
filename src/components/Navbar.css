@@ -48,3 +48,13 @@
 .nav a:hover{
     color: #f9fbfd;
 }
+.user-info{
+    color:#fff;
+    font-size:16px;
+    font-weight:600;
+    margin-left:20px;
+}
+
+.user-info strong{
+    color:#ffd700;
+}

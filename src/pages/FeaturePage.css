@@ -1,15 +1,11 @@
-/* ===========================
-   PROPERTY PAGE
-=========================== */
+/*  PROPERTY PAGE */
 
 .property-page {
   background: #fff;
   color: #222;
 }
 
-/* ===========================
-   HERO SECTION
-=========================== */
+/*HERO SECTION*/
 
 .property-hero {
   height: 60vh;
@@ -36,7 +32,7 @@
 
 .property-overlay p {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   max-width: 700px;
   margin: auto;
   line-height: 1.7;
@@ -61,7 +57,7 @@
   max-width: 850px;
   margin: auto;
   line-height: 1.8;
-  font-size: 17px;
+  font-size: 1.5rem;
 }
 
 /* ===========================

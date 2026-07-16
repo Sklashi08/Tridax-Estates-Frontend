@@ -22,11 +22,14 @@
 
 .service-overlay p {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   max-width: 700px;
   margin: auto;
 }
 
+.service-intro p {
+  font-size: 1.3rem;
+}
 .service-intro {
   padding: 80px 0;
   text-align: center;
@@ -115,4 +118,8 @@
 
 .service-cta a:hover {
   transform: translateY(-5px);
+}
+.service-cta p {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
 }

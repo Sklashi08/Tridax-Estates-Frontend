@@ -1,22 +1,21 @@
 .site-header {
   background: #d1a7a7;
-  border-bottom: 1px solid #eee;
   position: sticky;
   top: 0;
-  z-index: 1000;
   width: 100%;
+  z-index: 1000;
 }
 
 .site-header .container {
-  width: 90%;
-  max-width: 1200px;
+  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
+  padding: 0 30px;
+  height: 80px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 0;
-  flex-wrap: wrap;
-  gap: 15px;
 }
 
 .logo {
@@ -63,19 +62,15 @@
 .nav a:hover {
   color: #f9fbfd;
 }
-
 .user-info {
   color: #fff;
-  font-size: 16px;
   font-weight: 600;
-  margin-left: 20px;
-  white-space: nowrap;
 }
 
-.user-info strong {
-  color: #d62837;
+.user-info span {
+  color: #e63946;
+  font-weight: 700;
 }
-
 /* ====== RESPONSIVE NAVBAR ====== */
 
 /* Tablet and smaller laptops */

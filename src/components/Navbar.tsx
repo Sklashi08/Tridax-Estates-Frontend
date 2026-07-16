@@ -44,8 +44,9 @@ function Navbar() {
 
         {/* Logged in user */}
         <div className="user-info">
-          Welcome, <strong>{firstName}</strong>
-        </div>
+  Welcome,&nbsp;
+  <span>{firstName}</span>
+</div>
 
       </div>
     </header>

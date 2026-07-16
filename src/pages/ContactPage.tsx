@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./ContactPage.css";
 import {
   FaPhoneAlt,
@@ -118,7 +119,7 @@ const ContactPage = () => {
 
           <p>Let Tridax Estates help you make the right investment.</p>
 
-          <a href="/properties">Browse Properties</a>
+          <Link to="/properties">Browse Properties</Link>
         </div>
       </section>
     </main>

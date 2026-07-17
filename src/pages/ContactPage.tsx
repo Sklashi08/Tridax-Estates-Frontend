@@ -18,7 +18,7 @@ const ContactPage = () => {
             <h1>Contact Us</h1>
 
             <p>
-              We'd love to hear from you. Reach out to us for inquiries,
+              We will love to hear from you. Reach out to us for inquiries,
               property inspections, or investment opportunities.
             </p>
           </div>

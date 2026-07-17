@@ -13,6 +13,8 @@ import sales from "../assets/img/Tridax1.jpeg";
 import management from "../assets/img/Tridax2.jpeg";
 import advisory from "../assets/img/Tridax3.jpeg";
 
+import { Link } from "react-router-dom";
+
 function ServicePage() {
   const services = [
     {
@@ -194,7 +196,7 @@ function ServicePage() {
             real estate decision.
           </p>
 
-          <a href="/contact">Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
         </div>
       </section>
     </main>
